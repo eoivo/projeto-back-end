@@ -55,7 +55,7 @@ Para configurar e rodar este projeto em sua máquina local, siga estas etapas:
 
 2. **Instale as dependências:**
    ```bash
-   npm install / node server.js
+   npm install 
    ```
 
 3. **Configure as variáveis de ambiente:**
@@ -78,7 +78,7 @@ Para configurar e rodar este projeto em sua máquina local, siga estas etapas:
 
 5. **Inicie o servidor:**
    ```bash
-   node server.js
+   node server.js / npm start
    ```
 
 6. **Execute os testes (opcional):**
