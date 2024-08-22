@@ -10,7 +10,7 @@ A estrutura do projeto é organizada da seguinte forma:
 project-root/
 ├── src/
 │   ├── config/
-│   │   └── database.js           # Configuração da conexão com o banco de dados
+│   │   └── database.js            # Configuração da conexão com o banco de dados
 │   ├── controllers/
 │   │   ├── authController.js      # Controlador para autenticação de usuários
 │   │   ├── productController.js   # Controlador para operações com produtos
@@ -30,9 +30,10 @@ project-root/
 │   │   └── userRoutes.js          # Rotas para operações com usuários
 │   ├── services/
 │   │   ├── authService.js         # Serviço para lógica de autenticação
-├── app.js                        # Configuração principal do Express.js
-├── createData.js                 # Script para criar dados iniciais no banco de dados
-├── server.js                     # Arquivo principal para iniciar o servidor
+├── app.js                         # Configuração principal do Express.js
+├── createData.js                  # Script para criar dados iniciais no banco de dados
+├── index.html                     # Fornece links diretos para acessar os principais endpoints da API
+├── server.js                      # Arquivo principal para iniciar o servidor
 ├── tests/
 │   ├── authController.test.js     # Testes para o controlador de autenticação
 │   ├── userController.test.js     # Testes para o controlador de usuários
