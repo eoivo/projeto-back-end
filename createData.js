@@ -60,14 +60,14 @@ const criarDados = async () => {
       firstname: 'Lucas',
       surname: 'Silva',
       email: 'lucas.silva@example.com',
-      password: 'password123', 
+      password: await User.hashPassword('password123'), 
     });
 
     const user2 = await User.create({
       firstname: 'Ana',
       surname: 'Lima',
       email: 'ana.lima@example.com',
-      password: 'password123', 
+      password: await User.hashPassword('password123'), 
     });
 
     console.log('Dados criados com sucesso!');

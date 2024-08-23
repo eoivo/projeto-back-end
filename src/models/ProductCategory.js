@@ -13,7 +13,7 @@ ProductCategory.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: 'Products', 
+        model: 'Product', 
         key: 'id',
       },
     },
@@ -21,7 +21,7 @@ ProductCategory.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: 'Categories', 
+        model: 'Category', 
         key: 'id',
       },
     },

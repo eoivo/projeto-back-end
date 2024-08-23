@@ -2,7 +2,6 @@ const Product = require('../models/Product');
 const { ProductImage } = require('../models/ProductImage');
 const { ProductOption } = require('../models/ProductOption');
 
-
 const createProduct = async (req, res) => {
   const {
     enabled,
@@ -31,7 +30,6 @@ const createProduct = async (req, res) => {
       price_with_discount,
     });
 
-   
     if (images && images.length > 0) {
       await Promise.all(images.map(image => ProductImage.create({
         product_id: newProduct.id,
@@ -39,7 +37,6 @@ const createProduct = async (req, res) => {
       })));
     }
 
-    
     if (options && options.length > 0) {
       await Promise.all(options.map(option => ProductOption.create({
         product_id: newProduct.id,
@@ -53,7 +50,6 @@ const createProduct = async (req, res) => {
     res.status(500).json({ message: 'Erro do Servidor Interno' });
   }
 };
-
 
 const updateProduct = async (req, res) => {
   const productId = req.params.id;
@@ -95,7 +91,6 @@ const updateProduct = async (req, res) => {
   }
 };
 
-
 const deleteProduct = async (req, res) => {
   const productId = req.params.id;
 
@@ -115,7 +110,6 @@ const deleteProduct = async (req, res) => {
   }
 };
 
-
 const getAllProducts = async (req, res) => {
   try {
     const products = await Product.findAll();
@@ -130,5 +124,5 @@ module.exports = {
   createProduct,
   updateProduct,
   deleteProduct,
-  getAllProducts, 
+  getAllProducts,
 };

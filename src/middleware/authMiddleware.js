@@ -8,11 +8,11 @@ const authenticate = (req, res, next) => {
     return res.status(400).json({ message: 'Token is required' });
   }
 
-  jwt.verify(token, 'seu_segredo_aqui', (err, user) => {
+  jwt.verify(token, process.env.JWT_SECRET, (err, user) => {
     if (err) {
       return res.status(400).json({ message: 'Invalid token' });
     }
-    req.user = user; 
+    req.user = user;
     next();
   });
 };

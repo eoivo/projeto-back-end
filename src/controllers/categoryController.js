@@ -1,4 +1,4 @@
-const Category = require('../models/Category'); 
+const Category = require('../models/Category');
 
 const createCategory = async (req, res) => {
   const { name, slug, use_in_menu } = req.body;
@@ -18,7 +18,7 @@ const createCategory = async (req, res) => {
 
 const getAllCategories = async (req, res) => {
   try {
-    const categories = await Category.findAll(); 
+    const categories = await Category.findAll();
     res.status(200).json(categories);
   } catch (error) {
     console.error(error);
@@ -30,7 +30,7 @@ const getCategoryById = async (req, res) => {
   const { id } = req.params;
 
   try {
-    const category = await Category.findByPk(id); 
+    const category = await Category.findByPk(id);
     if (!category) {
       return res.status(404).json({ message: 'Categoria não encontrada' });
     }
@@ -69,7 +69,7 @@ const deleteCategory = async (req, res) => {
   try {
     const category = await Category.findByPk(id);
     if (!category) {
-      return res.status(404).json({ message: 'CCategoria não encontrada' });
+      return res.status(404).json({ message: 'Categoria não encontrada' });
     }
 
     await category.destroy();

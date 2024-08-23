@@ -1,0 +1,96 @@
+{
+	"info": {
+		"_postman_id": "629c922a-514b-41cb-ba69-2bffaed58ba2",
+		"name": "Produto",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37860297"
+	},
+	"item": [
+		{
+			"name": "Criar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"enabled\": true,\r\n  \"name\": \"Calça\",\r\n  \"slug\": \"calça\",\r\n  \"stock\": 31,\r\n  \"description\": \"Calça social\",\r\n  \"price\": 119.99,\r\n  \"price_with_discount\": 99.99\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/products/v1/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"v1",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/products/v1/products/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"v1",
+						"products",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"enabled\": true,\r\n  \"name\": \"Calça\",\r\n  \"slug\": \"calça\",\r\n  \"stock\": 31,\r\n  \"description\": \"Calça social\",\r\n  \"price\": 159.99,\r\n  \"price_with_discount\": 139.99\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/products/v1/products/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"v1",
+						"products",
+						"6"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
