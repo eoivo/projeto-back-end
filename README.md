@@ -2,6 +2,46 @@
 
 Este projeto é uma aplicação backend construída com Node.js e Express.js, usando Sequelize ORM para gerenciar o banco de dados MySQL. Ele implementa funcionalidades básicas de um sistema que lida com usuários, categorias e produtos.
 
+## Estrutura do Projeto
+
+A estrutura do projeto é organizada da seguinte forma:
+
+```
+project-root/
+├── src/
+│   ├── config/
+│   │   └── database.js            # Configuração da conexão com o banco de dados
+│   ├── controllers/
+│   │   ├── authController.js      # Controlador para autenticação de usuários
+│   │   ├── productController.js   # Controlador para operações com produtos
+│   │   └── userController.js      # Controlador para operações com usuários
+│   ├── middleware/
+│   │   └── authMiddleware.js      # Middleware para autenticação de usuários
+│   ├── models/
+│   │   ├── Category.js            # Modelo de dados para categorias
+│   │   ├── Product.js             # Modelo de dados para produtos
+│   │   ├── ProductCategory.js     # Modelo de dados para relação entre produtos e categorias
+│   │   ├── ProductImage.js        # Modelo de dados para imagens de produtos
+│   │   ├── ProductOption.js       # Modelo de dados para opções de produtos
+│   │   └── User.js                # Modelo de dados para usuários
+│   ├── routes/
+│   │   ├── categoryRoutes.js      # Rotas para operações com categorias
+│   │   ├── productRoutes.js       # Rotas para operações com produtos
+│   │   └── userRoutes.js          # Rotas para operações com usuários
+│   ├── services/
+│   │   ├── authService.js         # Serviço para lógica de autenticação
+├── app.js                         # Configuração principal do Express.js
+├── createData.js                  # Script para criar dados iniciais no banco de dados
+├── index.html                     # Fornece links diretos para acessar os principais endpoints da API
+├── server.js                      # Arquivo principal para iniciar o servidor
+├── tests/
+│   ├── authController.test.js     # Testes para o controlador de autenticação
+│   ├── userController.test.js     # Testes para o controlador de usuários
+│   └── userService.test.js        # Testes para o serviço de usuários
+├── .env                           # Arquivo de configuração das variáveis de ambiente
+├── .gitignore                     # Arquivo para ignorar arquivos e pastas no Git
+└── package.json                   # Gerenciador de dependências e scripts do projeto
+```
 
 ## Instalação
 
@@ -9,13 +49,13 @@ Para configurar e rodar este projeto em sua máquina local, siga estas etapas:
 
 1. **Clone o repositório:**
    ```bash
-   git clone https://github.com/eoivo/projeto-back-end.git
+   git clone https://github.com/eoivo/projeto-back-end
    cd projeto-back-end
    ```
 
 2. **Instale as dependências:**
    ```bash
-   npm install
+   npm install 
    ```
 
 3. **Configure as variáveis de ambiente:**
@@ -38,7 +78,12 @@ Para configurar e rodar este projeto em sua máquina local, siga estas etapas:
 
 5. **Inicie o servidor:**
    ```bash
-   npm start / node server.js
+   node server.js / npm start
+   ```
+
+6. **Execute os testes (opcional):**
+   ```bash
+   npm test
    ```
 
 ## Uso
