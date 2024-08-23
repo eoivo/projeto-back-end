@@ -86,6 +86,21 @@ Para configurar e rodar este projeto em sua máquina local, siga estas etapas:
    npm test
    ```
 
+## Configurações do Postman
+
+Para testar a API com Postman, você pode importar as coleções e variáveis de ambiente fornecidas. Siga as instruções abaixo:
+
+1. **Importar Coleções:**
+   - Abra o Postman e clique em "Importar" no canto superior esquerdo.
+   - Selecione o arquivo JSON da coleção que você deseja importar. Se você não tiver o arquivo JSON da coleção, você pode exportar do Postman usando a funcionalidade "Exportar" para obter os arquivos necessários.
+
+2. **Importar Variáveis de Ambiente:**
+   - No Postman, vá para a seção "Ambientes" e clique em "Importar".
+   - Selecione o arquivo JSON do ambiente que contém variáveis como URLs base e chaves de autenticação.
+
+3. **Verificar Configurações:**
+   - Certifique-se de que as variáveis de ambiente estão corretamente configuradas com os valores do seu ambiente local, como `localhost` para URLs.
+
 ## Uso
 
 Após iniciar o servidor, a aplicação estará disponível em `http://localhost:3000`. Você pode interagir com a API usando as seguintes rotas:
