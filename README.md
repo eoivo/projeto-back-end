@@ -35,9 +35,9 @@ project-root/
 ├── index.html                     # Fornece links diretos para acessar os principais endpoints da API
 ├── server.js                      # Arquivo principal para iniciar o servidor
 ├── tests/
-│   ├── authController.test.js     # Testes para o controlador de autenticação
-│   ├── userController.test.js     # Testes para o controlador de usuários
-│   └── userService.test.js        # Testes para o serviço de usuários
+│   ├── category.test.js           # Testes para o controlador de categorias
+│   ├── product.test.js            # Testes para o controlador de produtos
+│   └── user.test.js               # Testes para o controlador de usuários
 ├── .env                           # Arquivo de configuração das variáveis de ambiente
 ├── .gitignore                     # Arquivo para ignorar arquivos e pastas no Git
 └── package.json                   # Gerenciador de dependências e scripts do projeto
@@ -81,7 +81,7 @@ Para configurar e rodar este projeto em sua máquina local, siga estas etapas:
    node server.js / npm start
    ```
 
-6. **Execute os testes (opcional):**
+6. **Execute os testes:**
    ```bash
    npm test
    ```
