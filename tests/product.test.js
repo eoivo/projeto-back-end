@@ -13,7 +13,7 @@ describe('Product API', () => {
       name: 'Test Product',
       slug: 'test-product',
       price: 10.00,
-      price_with_discount: 8.00 // Assegure-se de incluir este campo
+      price_with_discount: 8.00 
     };
     const response = await request(app)
       .post('/api/products/v1/products')
@@ -22,5 +22,5 @@ describe('Product API', () => {
     expect(response.body).toHaveProperty('name', 'Test Product');
   });
 
-  // Adicione mais testes conforme necessário
+  
 });

@@ -1,5 +1,5 @@
 const request = require('supertest');
-const app = require('../app'); // Ajuste o caminho para o seu arquivo app.js
+const app = require('../app'); 
 
 describe('Category API', () => {
   it('should fetch all categories', async () => {
@@ -21,5 +21,5 @@ describe('Category API', () => {
     expect(response.body).toHaveProperty('name', 'Test Category');
   });
 
-  // Adicione mais testes conforme necessário
+  
 });
