@@ -9,6 +9,9 @@ router.post('/v1/products', productController.createProduct);
 router.get('/v1/products', productController.getAllProducts);
 
 
+router.get('/v1/products/:id', productController.getProductById); 
+
+
 router.put('/v1/products/:id', productController.updateProduct);
 
 

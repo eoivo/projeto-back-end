@@ -2,6 +2,7 @@ const Product = require('../models/Product');
 const { ProductImage } = require('../models/ProductImage');
 const { ProductOption } = require('../models/ProductOption');
 
+
 const createProduct = async (req, res) => {
   const {
     enabled,
@@ -51,6 +52,7 @@ const createProduct = async (req, res) => {
   }
 };
 
+
 const updateProduct = async (req, res) => {
   const productId = req.params.id;
   const {
@@ -91,6 +93,7 @@ const updateProduct = async (req, res) => {
   }
 };
 
+
 const deleteProduct = async (req, res) => {
   const productId = req.params.id;
 
@@ -110,6 +113,7 @@ const deleteProduct = async (req, res) => {
   }
 };
 
+
 const getAllProducts = async (req, res) => {
   try {
     const products = await Product.findAll();
@@ -120,9 +124,25 @@ const getAllProducts = async (req, res) => {
   }
 };
 
+// Obter um produto por ID
+const getProductById = async (req, res) => {
+  const productId = req.params.id;
+  try {
+    const product = await Product.findByPk(productId);
+    if (!product) {
+      return res.status(404).json({ message: 'Produto não encontrado' });
+    }
+    res.status(200).json(product);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Erro ao buscar produto' });
+  }
+};
+
 module.exports = {
   createProduct,
   updateProduct,
   deleteProduct,
   getAllProducts,
+  getProductById, 
 };

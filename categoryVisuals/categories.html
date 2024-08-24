@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar Categorias</title>
+    <link rel="stylesheet" href="/categoryVisuals/categories.css">
+</head>
+<body>
+    <header>
+        <h1>Gerenciar Categorias</h1>
+    </header>
+
+    <section id="categoryFormSection" style="display: none;">
+        <form id="categoryForm">
+            <input type="hidden" id="categoryId">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" required>
+            <label for="slug">Slug:</label>
+            <input type="text" id="slug" required>
+            <label for="use_in_menu">Exibir no Menu:</label>
+            <input type="checkbox" id="use_in_menu">
+            <button type="submit" id="submitBtn">Salvar</button>
+            <button type="button" id="cancelBtn">Cancelar</button>
+        </form>
+    </section>
+
+    <button id="createCategoryBtn">Criar Nova Categoria</button>
+    
+    <table id="categoryTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Slug</th>
+                <th>Exibir no Menu</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Linhas da tabela serão inseridas aqui pelo JavaScript -->
+        </tbody>
+    </table>
+
+    <div id="message"></div>
+
+    <script src="/categoryVisuals/categories.js"></script>
+</body>
+</html>

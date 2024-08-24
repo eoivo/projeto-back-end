@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Produtos</title>
+    <link rel="stylesheet" href="/productVisuals/product.css">
+</head>
+<body>
+    <header>
+        <h1>Gerenciamento de Produtos</h1>
+        <button id="createProductBtn">Adicionar Novo Produto</button>
+    </header>
+
+    <div id="message" style="display: none;"></div>
+
+    <section id="productFormSection">
+        <form id="productForm" style="display: none;">
+            <input type="hidden" id="productId" value="">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" required>
+            <label for="slug">Slug:</label>
+            <input type="text" id="slug" required>
+            <label for="stock">Estoque:</label>
+            <input type="number" id="stock" required>
+            <label for="description">Descrição:</label>
+            <input type="text" id="description" required>
+            <label for="price">Preço:</label>
+            <input type="number" id="price" step="0.01" required>
+            <label for="price_with_discount">Preço com Desconto:</label>
+            <input type="number" id="price_with_discount" step="0.01">
+            <label for="enabled">Habilitado:</label>
+            <input type="checkbox" id="enabled">
+    
+            <button type="submit" id="submitBtn">Salvar</button>
+            <button type="button" id="cancelBtn">Cancelar</button>
+        </form>
+    </section>
+
+    <section id="productTableSection">
+        <table id="productTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Descrição</th>
+                    <th>Preço</th>
+                    <th>Preço com Desconto</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+ 
+            </tbody>
+        </table>
+    </section>
+
+    <script src="/productVisuals/product.js"></script>
+</body>
+</html>

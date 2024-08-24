@@ -1,0 +1,201 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+
+header {
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button#createUserBtn {
+    background-color: #007bff;
+    color: white;
+    display: block; 
+    margin: 20px auto; 
+}
+
+button#createUserBtn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+button#submitBtn {
+    background-color: #28a745;
+    color: white;
+}
+
+button#submitBtn:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+button#cancelBtn {
+    background-color: #dc3545;
+    color: white;
+}
+
+button#cancelBtn:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+
+button.editBtn {
+    background-color: #ffc107; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button.editBtn:hover {
+    background-color: #e0a800; 
+    transform: scale(1.05);
+}
+
+button.deleteBtn {
+    background-color: #dc3545; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button.deleteBtn:hover {
+    background-color: #c82333; 
+    transform: scale(1.05);
+}
+
+
+#userTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+#userTable th, #userTable td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+    background-color: white;
+}
+
+#userTable th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+#userTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#userTable tr:hover {
+    background-color: #e9ecef;
+}
+
+
+#userFormSection {
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: center; 
+}
+
+#userForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#userForm label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: left;
+    width: 100%; 
+}
+
+#userForm input[type="text"],
+#userForm input[type="email"],
+#userForm input[type="password"] {
+    width: calc(100% - 22px); 
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#userForm button {
+    margin: 10px 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#userForm #submitBtn {
+    background-color: #28a745;
+    color: white;
+}
+
+#userForm #cancelBtn {
+    background-color: #dc3545;
+    color: white;
+}
+
+#userForm #submitBtn:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+#userForm #cancelBtn:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    button {
+        font-size: 0.9em;
+    }
+
+    #userForm input[type="text"],
+    #userForm input[type="email"],
+    #userForm input[type="password"] {
+        width: calc(100% - 16px); 
+    }
+}

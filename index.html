@@ -4,13 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>API Links</title>
+    <style>
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+
+        
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0; 
+            font-size: 2.5em; 
+            font-weight: 700;
+        }
+
+        
+        .link-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+        }
+
+        .link-list a {
+            display: block;
+            width: 100%;
+            max-width: 400px;
+            padding: 15px;
+            margin: 10px;
+            background-color: white;
+            color: #007bff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .link-list a:hover {
+            background-color: #0056b3;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .link-list a:active {
+            transform: scale(0.95);
+        }
+    </style>
 </head>
 <body>
-    <h1>API Links</h1>
-    <ul>
-        <li><a href="http://localhost:3000/api/categories/v1/categories" target="_blank">Categorias</a></li>
-        <li><a href="http://localhost:3000/api/products/v1/products" target="_blank">Produtos</a></li>
-        <li><a href="http://localhost:3000/api/users/v1/users" target="_blank">Usuários</a></li>
-    </ul>
+    <header>
+        <h1>API Links</h1>
+    </header>
+    <div class="link-list">
+        <a href="http://localhost:3000/categories" target="_blank">Categorias</a>
+        <a href="http://localhost:3000/products" target="_blank">Produtos</a>
+        <a href="http://localhost:3000/users" target="_blank">Usuários</a>
+    </div>
 </body>
 </html>
