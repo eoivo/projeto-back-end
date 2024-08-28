@@ -1,3 +1,10 @@
 {
-    "rewrites": [{ "source": "/(.*)", "destination": "/server.js" }]
-  }
+  "rewrites": [
+    { "source": "/api/users", "destination": "/api/users" },
+    { "source": "/api/products", "destination": "/api/products" },
+    { "source": "/api/categories", "destination": "/api/categories" },
+    { "source": "/users", "destination": "/users" },
+    { "source": "/products", "destination": "/products" },
+    { "source": "/categories", "destination": "/categories" }
+  ]
+}
